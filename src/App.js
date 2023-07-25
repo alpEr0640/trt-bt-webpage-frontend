@@ -1,7 +1,8 @@
+import Homepage from './Pages/Homepage'
 function App() {
   return (
     <div>
-      helllo first project
+      <Homepage/>
     </div>
   );
 }
