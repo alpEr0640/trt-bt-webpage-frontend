@@ -1,7 +1,9 @@
+import NavBar from "./Components/NavBar";
+import HomePage from "./Pages/Homepage"
 function App() {
   return (
     <div>
-      helllo first project
+      <HomePage></HomePage>
     </div>
   );
 }
