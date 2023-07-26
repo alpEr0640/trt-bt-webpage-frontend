@@ -1,7 +1,8 @@
 import Homepage from './Pages/Homepage'
+import 'bootstrap/dist/css/bootstrap.css'
 function App() {
   return (
-    <div>
+    <div className='Row'>
       <Homepage/>
     </div>
   );
