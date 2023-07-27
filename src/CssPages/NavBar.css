@@ -1,10 +1,14 @@
 .active{
-    background-color: #e50028 !important;
+    background-color: #e50028 !important ;
     font-weight: 600 !important;
-    color: #fff !important;
+    color: #fff !important ;
 }
 
 .kenan{
-    color:black !important;
-    font-weight: 600;
+    color:rgb(0, 0, 0) !important  ;
+    font-weight: 600!important;
+}
+
+.shadoww {
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
