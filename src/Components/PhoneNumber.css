@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+    font-family: 'Inter', sans-serif;
+
+}
+.phonetable{
+    border-radius: 20px;
+    background: #FFF;
+    width: 406px;
+    min-height: 600px;
+    box-shadow:  0 0rem 1rem rgba(0, 0, 0, 0.15)!important;
+}
+
+.phonehead{
+    line-height: 60px;
+    column-span: all;
+    margin-top: 30px;
+    border-bottom-style : none;
+    color: #000;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom-style: solid;
+    border-bottom: 2px solid black;
+    
+    
+
+}
+
+.li-header{
+    font-size: large ;
+    text-align: center;
+    list-style: none;
+}
+
+/* .left{
+    
+    width: 60%;
+    display: inline-block;
+    border-radius: 5px;
+} */
+.list-group-item{
+    border: none !important;
+}
+.right{
+    width: 40%;
+    
+    display: inline-block;
+    border-radius: 5px;
+
+
+}
