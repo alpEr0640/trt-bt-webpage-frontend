@@ -1,21 +1,14 @@
-import React from 'react'
-
-import Announcement from '../Components/Announcement'
-import NavBar from '../Components/NavBar'
-
+import React from "react";
+import Announcement from "../Components/Announcement";
+import "../CssPages/Homepage.css";
 
 export default function Homepage() {
   return (
-      <div className="row">
-        <div className="col-8">
+    <div style={{ height: "100%" , overflowX:"hidden", overflowY:"hidden"}} className="row">
+      <div className="col-8">
         <Announcement />
-        <NavBar/>
-        </div>
-      <div className="col-4">
-        Alper SONAT
       </div>
-      </div>
-    
+      <div className="col-4"></div>
+    </div>
   );
-
 }

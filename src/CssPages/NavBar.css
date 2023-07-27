@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .active{
     background-color: #e50028 !important;
     font-weight: 600 !important;
@@ -7,4 +10,7 @@
 .kenan{
     color:black !important;
     font-weight: 600;
+}
+.shadow{
+   box-shadow:  0 0rem 1rem rgba(0, 0, 0, 0.15)!important;
 }
