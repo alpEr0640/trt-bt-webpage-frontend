@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import "../CssPages/Announcement.css";
 import axios from "axios";
@@ -50,4 +51,5 @@ export default function Announcement() {
       </div>
     </div>
   );
+
 }
