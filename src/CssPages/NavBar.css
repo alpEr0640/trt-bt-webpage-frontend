@@ -1,18 +1,24 @@
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
-.active{
-    background-color: #e50028 !important ;
-    font-weight: 600 !important;
-    color: #fff !important ;
+.active {
+  background-color: #e50028 !important ;
+  font-weight: 600 !important;
+  color: #fff !important ;
 }
 
-.kenan{
-
-    color:rgb(0, 0, 0) !important  ;
-    font-weight: 600!important;
+.kenan {
+  color: rgb(0, 0, 0) !important  ;
+  font-weight: 600 !important;
 }
 
 .shadow {
-    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.navbar-toggler {
+  background-color: #fff; /* Replace #fff with the desired background color */
+}
+
+nav {
+  z-index: 1000; /* Set a higher z-index value if necessary */
 }

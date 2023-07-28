@@ -6,11 +6,10 @@ import NavBar from "./Components/NavBar";
 
 function App() {
   return (
-    <div>
+    <div style={{height:"10000px"}}>
       <NavBar/>
       <Content />
       <Footer />
-
     </div>
   );
     
