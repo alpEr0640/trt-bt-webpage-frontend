@@ -8,7 +8,7 @@ export default function Content() {
     <div
       style={{
         height: "85%",
-        position: "fixed",
+        position: "absolute",
         top: "100px",
         width:"100%"
       }}

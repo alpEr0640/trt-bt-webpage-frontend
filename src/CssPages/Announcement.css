@@ -18,6 +18,27 @@
   overflow-y: scroll;
   height: 650px;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius:5px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background:#e50028; 
+} */
 
 .announcementItemBody {
   cursor: pointer;
@@ -44,19 +65,20 @@
 }
 
 .leftTop {
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  font-weight: 500;
-}
-
-.leftBottom {
   height: 60%;
   display: flex;
   justify-content: center;
+  align-items: end;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.leftBottom {
+  height: 40%;
+  display: flex;
+  justify-content: center;
   align-items: start;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .right {

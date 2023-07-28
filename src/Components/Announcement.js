@@ -21,7 +21,7 @@ export default function Announcement() {
   return (
     <div className="announcement shadow">
       <div className="announcementHead">
-        <h1>DUYURULAR</h1>
+        <h2>Duyurular</h2>
       </div>
       <div className="announcementBody">
         {todos.map((alper) => {
