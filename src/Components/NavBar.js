@@ -1,3 +1,4 @@
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link, NavLink } from "react-router-dom";
@@ -6,6 +7,7 @@ import logo from "../images/trt.png";
 
 export default function NavBar() {
   return (
+
     <nav
       style={{ position: "fixed", borderRadius: "12px", height: "44px" }}
       className="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow p-1 m-4 "
