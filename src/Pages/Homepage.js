@@ -1,6 +1,7 @@
 import React from "react";
 import Announcement from "../Components/Announcement";
 import "../CssPages/Homepage.css";
+import PhoneNumbers from '../Components/PhoneNumbers'
 
 export default function Homepage() {
   return (
@@ -8,7 +9,9 @@ export default function Homepage() {
       <div className="col-8">
         <Announcement />
       </div>
-      <div className="col-4"></div>
+      <div className="col-4">
+      <PhoneNumbers/>
+      </div>
     </div>
   );
 }
