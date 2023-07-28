@@ -1,10 +1,16 @@
-// import React from 'react'
-// import NavBar from '../Components/NavBar'
 
-// export default function Homepage() {
-//   return (
-//     <div>
-//         <NavBar/>
-//     </div>
-//   )
-// }
+import React from "react";
+import Announcement from "../Components/Announcement";
+import "../CssPages/Homepage.css";
+
+export default function Homepage() {
+  return (
+    <div style={{ height: "100%" , overflowX:"hidden", overflowY:"hidden"}} className="row">
+      <div className="col-8">
+        <Announcement />
+      </div>
+      <div className="col-4"></div>
+    </div>
+  );
+}
+

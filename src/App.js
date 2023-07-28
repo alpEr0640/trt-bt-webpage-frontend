@@ -1,12 +1,19 @@
+
+import "bootstrap/dist/css/bootstrap.css";
 import Content from "./Components/Content";
+import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
-import HomePage from "./Pages/Homepage";
+
 function App() {
   return (
     <div>
-      <Content></Content>
+      <NavBar/>
+      <Content />
+      <Footer />
+
     </div>
   );
+    
 }
 
 export default App;

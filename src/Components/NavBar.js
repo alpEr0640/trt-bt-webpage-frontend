@@ -26,6 +26,7 @@ function NavBar() {
         <Link className="navbar-brand mx-4"  to="/">
           <img src={logo} alt="Logo" height={"24"} />
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -37,6 +38,7 @@ function NavBar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+
 
         <div className="container-fluid" id="navbarText">
           <ul style={{color:"black"}}
@@ -113,6 +115,7 @@ function NavBar() {
             >
             GİRİŞ
           </button>
+
             </li>
           </ul>
           <span class="navbar-text"></span>
@@ -121,6 +124,7 @@ function NavBar() {
         </div>
       </nav>
     
+
   );
 }
 
