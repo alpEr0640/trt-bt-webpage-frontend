@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import Homepage from "./Pages/Homepage";
 
-function App() {
-  return (
-    
-      <Homepage></Homepage>
-  
-=======
 
 import "bootstrap/dist/css/bootstrap.css";
 import Content from "./Components/Content";
@@ -20,7 +12,6 @@ function App() {
       <Content />
       <Footer />
     </div>
->>>>>>> f9876319894839c7bb095aa25fc97efe0cf6ff5d
   );
     
 }

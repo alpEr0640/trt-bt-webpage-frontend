@@ -1,37 +1,44 @@
 import React from 'react'
-import './PhoneNumber.css'
-
+import '../CssPages/PhoneNumber.css'
+import '../CssPages/NavBar.css'
 function PhoneNumbers() {
     return (
         <div  >
-            <div className='phonetable' >
-                <div className='phonehead' >
-                    Telefon Numaraları
-                </div >
-                <br></br>
-
-                <div className='left' >
-
-                    <ul className="list-group" >
-
-                        <li className="list-group-item">Akif</li>
-                        <li className="list-group-item">daire başkanı </li>
-                    </ul>
-                    <ul className='list-group'>
-                        <li className="list-group-item"> 0543356345 </li>
-                    </ul>
+            <div className='PhoneTable shadow'>
+                <div className='PhoneHeader'>
+                    <h2>Telefon Numaraları</h2>
                 </div>
+                {/* <div className='PhoneBody'>
+                    <div className='PhoneBodyLeft'>
+                        <div className='PhoneBodyLeftTop'>Alper SONAT</div>
+                        <div className='PhoneBodyLeftBottom'>Daire Başkanlığı</div>
+                        
+                    </div>
+                    <div className='PhoneBodyRight'>05346422354</div>
+                </div> */}
+                <div className='PhoneBody'>
+                    <div className='PhoneBodyLeft'>
+                        <div className='PhoneBodyLeftTop'>Alper SONAT</div>
+                        <div className='PhoneBodyLeftBottom'>Daire Başkanlığı</div>
 
-                <div className='right'>
+                    </div>
+                    <div className='PhoneBodyRight'>
+                        <div className='phoneNumber'>Alper SONAT</div>
 
-                    <ul className="list-group">
-
-                    </ul>
+                    </div>
                 </div>
+                <div className='PhoneBody'>
+                    <div className='PhoneBodyLeft'>
+                        <div className='PhoneBodyLeftTop'>Alper SONAT</div>
+                        <div className='PhoneBodyLeftBottom'>Daire Başkanlığı</div>
 
+                    </div>
+                    <div className='PhoneBodyRight'>
+                        <div className='phoneNumber'>Alper SONAT</div>
+
+                    </div>
+                </div>
             </div>
-            
-
 
         </div>
     )
