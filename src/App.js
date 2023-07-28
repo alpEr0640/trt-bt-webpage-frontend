@@ -6,7 +6,7 @@ import NavBar from "./Components/NavBar";
 
 function App() {
   return (
-    <div style={{height:"10000px"}}>
+    <div>
       <NavBar/>
       <Content />
       <Footer />

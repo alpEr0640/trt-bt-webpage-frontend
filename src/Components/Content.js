@@ -3,7 +3,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ColleaguesPage from "../Pages/ColleaguesPage";
 import AppsPage from "../Pages/AppsPage";
-import NavBar from "./NavBar";
 import LegislationPage from "../Pages/LegislationPage";
 import GuidesPage from "../Pages/GuidesPage";
 import ForumPage from "../Pages/ForumPage";

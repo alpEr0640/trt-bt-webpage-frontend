@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../images/trt.png";
 
-
 function NavBar() {
   return (
     <nav
@@ -15,27 +14,29 @@ function NavBar() {
         <img src={logo} alt="Logo" height={"24"} />
       </Link>
       <button
-  className="navbar-toggler"
-  type="button"
-  onClick={() => {
-    const navbarNav = document.getElementById("navbarNav");
-    navbarNav.classList.toggle("show");
-  }}
-  aria-controls="navbarNav"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
->
-  <span className="navbar-toggler-icon"></span>
-</button>
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-  <ul style={{ color: "black" }} className="navbar-nav me-auto mb-2 mb-lg-0 nav-justified mx-5">
-    {/* Your navigation items */}
-  </ul>
-</div>
+      <div
+        className="collapse navbar-collapse justify-content-end"
+        id="navbarNav"
+      >
+        <ul
+          style={{ color: "black" }}
+          className="navbar-nav me-auto mb-2 mb-lg-0 nav-justified mx-5"
+        >
+        </ul>
+      </div>
 
-
-      <div className="container-fluid" id="navbarNav">
+      <div className="container-fluid">
         <ul
           style={{ color: "black" }}
           id="navbarNav"

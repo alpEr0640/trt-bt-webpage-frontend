@@ -1,10 +1,13 @@
-import React from 'react'
-import NavBar from '../Components/NavBar'
+import React from "react";
+import NavBar from "../Components/NavBar";
 
 function GuidesPage() {
   return (
-    <div><NavBar/></div>
-  )
+    <div>
+      <NavBar />
+      GuidesPage
+    </div>
+  );
 }
 
-export default GuidesPage
+export default GuidesPage;

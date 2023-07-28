@@ -1,10 +1,13 @@
-import React from 'react'
-import NavBar from '../Components/NavBar'
+import React from "react";
+import NavBar from "../Components/NavBar";
 
 function ColleaguesPage() {
   return (
-    <div><NavBar/></div>
-  )
+    <div>
+      <NavBar />
+      ColleaguesPage
+    </div>
+  );
 }
 
-export default ColleaguesPage
+export default ColleaguesPage;
