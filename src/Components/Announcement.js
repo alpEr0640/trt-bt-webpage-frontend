@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import "../CssPages/Announcement.css";
 import axios from "axios";
+import { basebackendurl } from "../constants";
+import { dateTimeSelector } from "../utils"
+import AnnouncementModal from "./AnnouncementModal";
 
 export default function Announcement() {
   const [todos, setTodos] = useState([]);
-  console.log("alper:", todos);
+  
   useEffect(() => {
     const fetchTodos = async () => {
       try {
         const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/todos"
+         `${basebackendurl}announcements/uploads`
         );
+        console.log("🚀 ~ file: Announcement.js:15 ~ fetchTodos ~ response:", response.data)
         setTodos(response.data);
+        console.log("🚀 ~ file: Announcement.js:22 ~ fetchTodos ~ response.data:", response.data)
       } catch (err) {
-        console.log(err);
+        console.log("error fetch announcement api:",err);
       }
     };
     fetchTodos();
@@ -28,13 +33,20 @@ export default function Announcement() {
           return (
             <div key={alper.id} className="announcementItemBody ">
               <div className="Left ">
-                <div className="leftTop">{alper.id}</div>
-                <div className="leftBottom">Temmuz</div>
+                <div className="leftTop">
+                  {dateTimeSelector(alper.uploadTime).day}
+                </div>
+                <div className="leftBottom">
+                  {dateTimeSelector(alper.uploadTime).month}
+                </div>
               </div>
-              <div className="right">{alper.title}</div>
+              <a >
+                <div className="right">{alper.title}</div>
+              </a>
             </div>
           );
         })}
+        <AnnouncementModal  />
       </div>
     </div>
   );
