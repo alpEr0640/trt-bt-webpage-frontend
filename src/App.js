@@ -7,7 +7,7 @@ import NavBar from "./Components/NavBar";
 
 function App() {
   return (
-    <div>
+    <div >
       <NavBar/>
       <Content />
       <Footer />
