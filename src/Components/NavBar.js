@@ -90,7 +90,7 @@ function NavBar() {
               </a>
             </li>
           </ul>
-          <span class="navbar-text"></span>
+          <span className="navbar-text"></span>
         </div>
         <div className="login ">
           <button

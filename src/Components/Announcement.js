@@ -4,12 +4,11 @@ import axios from "axios";
 
 export default function Announcement() {
   const [todos, setTodos] = useState([]);
-  console.log("alper:", todos);
   useEffect(() => {
     const fetchTodos = async () => {
       try {
         const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/todos"
+          "http://172.30.9.107:8080/api/announcements/uploads"
         );
         setTodos(response.data);
       } catch (err) {
