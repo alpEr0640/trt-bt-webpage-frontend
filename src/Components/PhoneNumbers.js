@@ -25,22 +25,24 @@ function PhoneNumbers() {
                     <h2>Telefon Numaraları</h2>
                 </div>
 
+                <div className='overflow'>
 
-                 {todos.map((y) => {
-                    return (
-                        <div className='PhoneBody'>
-                            <div className='PhoneBodyLeft'>
-                                <div className='PhoneBodyLeftTop'>{y.id}</div>
-                                <div className='PhoneBodyLeftBottom'>{y.title}</div>
+                    {todos.map((y) => {
+                        return (
+                            <div className='PhoneBody'>
+                                <div className='PhoneBodyLeft'>
+                                    <div className='PhoneBodyLeftTop'>{y.id}</div>
+                                    <div className='PhoneBodyLeftBottom'>{y.title}</div>
 
+                                </div>
+                                <div className='PhoneBodyRight'>
+                                    <div className='phoneNumber'>{y.title}</div>
+
+                                </div>
                             </div>
-                            <div className='PhoneBodyRight'>
-                                <div className='phoneNumber'>{y.title}</div>
-
-                            </div>
-                        </div>
-                    );
-                })} 
+                        );
+                    })}
+                </div>
                 {/* <div className='PhoneBody'>
                             <div className='PhoneBodyLeft'>
                                 <div className='PhoneBodyLeftTop'>etrhdger</div>

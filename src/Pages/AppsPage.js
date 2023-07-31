@@ -5,7 +5,7 @@ function AppsPage() {
   return (
     <div>
       <NavBar />
-      AppsPage
+      
     </div>
   );
 }
