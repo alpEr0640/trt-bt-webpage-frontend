@@ -51,6 +51,7 @@
     align-items: center;
     justify-content: center;
     background-color: #F6F4EB;
+    font-weight: bold;
     
     
 }
@@ -59,12 +60,15 @@
     display: flex;
     justify-content: center;
     align-items:end;
-}
+    font-size: large;
+    font-weight: bolder;
+}   
 .PhoneBodyLeftBottom{
     height: 40%;
     display: flex;
     justify-content: center;
     align-items:start;
+    font-style: italic;
 }
 .phoneNumber{
     display: flex;
