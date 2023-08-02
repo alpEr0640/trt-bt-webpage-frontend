@@ -7,6 +7,7 @@ import AnnouncementModal from "./AnnouncementModal";
 
 export default function Announcement() {
   const [todos, setTodos] = useState([]);
+
   const [showModal, setShowModal] = useState(false);
   const handleShowModal = () => {
     setShowModal(true);
@@ -21,11 +22,14 @@ export default function Announcement() {
       user: value,
     });
   };
-  
+
+
+>>>>>>> PhoneNumbers
   useEffect(() => {
     const fetchTodos = async () => {
       try {
         const response = await axios.get(
+
          `${basebackendurl}announcements/uploads`
         );
 
