@@ -1,0 +1,56 @@
+.modalHeader {
+  display: flex;
+  justify-content: start;
+  align-items: start ;
+  color: #e50028;
+}
+.ModalBodyHeader {
+  display: flex;
+  justify-content: start;
+  align-items: start ;
+  margin-top: 50px;
+  color: #e50028;
+  font-weight: bold;
+}
+.modalBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalBodyItem {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.37);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.37);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.modalBodyRightText {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalBodyLeftText {
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.buton {
+  background-color: #e50028;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+.buton:hover {
+  background-color: #e50028;
+}
+.modalBodyRightText a {
+  color: #e50028;
+}

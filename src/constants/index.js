@@ -1,4 +1,4 @@
-const basebackendurl = "http://10.6.131.230:8080/api/";
+const basebackendurl = "http://192.168.137.1:8080/api/";
 export {
     basebackendurl
 }

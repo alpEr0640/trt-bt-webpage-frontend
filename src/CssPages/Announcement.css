@@ -1,5 +1,6 @@
+
 .announcement {
-  width: 80%;
+  width: 90%;
   border-radius: 20px;
   background: #fff;
   padding: 10px;
@@ -16,45 +17,23 @@
 }
 
 .announcementBody {
-  overflow-y: scroll;
-  height: 650px;
+  height: 600px;
 }
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: black; 
-  border-radius:5px;
-}
-
-/* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-  background:#e50028; 
-} */
 
 .announcementItemBody {
   cursor: pointer;
   height: 100px;
-  background-color: #e9e7e1;
+  background-color: #F6F4EB;
   border-radius: 12px;
-  margin: 10px;
+  margin: 10px 10px 0px 10px;
   display: flex;
 }
 
-.announcementItemBody:hover {
+ .announcementItemBody:hover {
   background-color: #e50028;
   transition: 0.5s;
   color: white;
-}
+} 
 
 .Left {
   width: 20%;
@@ -89,6 +68,75 @@
   justify-content: center;
   align-items: center;
 }
-.announcementBody a{
+.entries a{
   width: 100%;
 }
+.pagination{
+  width: 100%;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.pageNumbers{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  margin: 10px 10px 0 0 ;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+}
+.paginationItem{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.pageNumbers li{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.page-btn{
+  border: none;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  
+}
+.page-btn i{
+  color: #e50028;
+}
+.pgn-num{
+  width: 50px;
+  height: 30px;
+}
+.page-num{
+  font-size: 25px;
+}
+.pgn-num a{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 0px 10px 10px 0px;
+}
+.isActive{
+  font-size: 20px;
+  cursor: initial !important;
+  font-weight: bold;
+  background-color: #e50028;
+  color: #fff;
+  border-radius: 5px;
+}
+
