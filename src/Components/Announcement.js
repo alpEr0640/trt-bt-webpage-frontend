@@ -17,17 +17,16 @@ export default function Announcement() {
   });
 
   const handleEditUser = (value) => {
-    //console.log("🚀 ~ file: UserList.js:33 ~ handleEditUser ~ value:", value);
     setItem({
       user: value,
     });
   };
-
+  
   useEffect(() => {
     const fetchTodos = async () => {
       try {
         const response = await axios.get(
-          `${basebackendurl}announcements/uploads`
+         `${basebackendurl}announcements/uploads`
         );
 
         setTodos(response.data.reverse());
