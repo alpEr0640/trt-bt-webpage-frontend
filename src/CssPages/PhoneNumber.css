@@ -1,0 +1,78 @@
+
+.PhoneTable{
+    width: 80%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+    
+}
+.PhoneHeader{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.overflow{
+    overflow-y: scroll;
+    height: 650px;
+}
+
+.PhoneBody{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #F6F4EB;
+    margin-top: 10px;
+    
+
+    
+    
+    
+}
+.PhoneBodyLeft{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+    
+}
+.PhoneBodyRight{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F4EB;
+    font-weight: bold;
+    
+    
+}
+.PhoneBodyLeftTop{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    font-weight: bolder;
+    font-size: large;
+}
+.PhoneBodyLeftBottom{
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    font-style: italic;
+}
+.phoneNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
