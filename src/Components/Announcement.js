@@ -1,55 +1,171 @@
-
 import React, { useEffect, useState } from "react";
 import "../CssPages/Announcement.css";
 import axios from "axios";
 import { basebackendurl } from "../constants";
-import { dateTimeSelector } from "../utils"
+import { dateTimeSelector } from "../utils";
 import AnnouncementModal from "./AnnouncementModal";
 
 export default function Announcement() {
   const [todos, setTodos] = useState([]);
-  
+  const [showModal, setShowModal] = useState(false);
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+  const [tempItem, setTempItem] = useState();
+  const [Item, setItem] = useState({
+    user: {},
+  });
+
+  const handleEditUser = (value) => {
+    //console.log("🚀 ~ file: UserList.js:33 ~ handleEditUser ~ value:", value);
+    setItem({
+      user: value,
+    });
+  };
+
   useEffect(() => {
     const fetchTodos = async () => {
       try {
         const response = await axios.get(
-         `${basebackendurl}announcements/uploads`
+          `${basebackendurl}announcements/uploads`
         );
-        console.log("🚀 ~ file: Announcement.js:15 ~ fetchTodos ~ response:", response.data)
-        setTodos(response.data);
-        console.log("🚀 ~ file: Announcement.js:22 ~ fetchTodos ~ response.data:", response.data)
+
+        setTodos(response.data.reverse());
       } catch (err) {
-        console.log("error fetch announcement api:",err);
+        console.log("error fetch announcement api:", err);
       }
     };
     fetchTodos();
   }, []);
+
+  const [currentPage, setcurrentPage] = useState(1);
+  const [itemsPerPage, setitemsPerPage] = useState(5);
+
+  const [pageNumberLimit, setpageNumberLimit] = useState(5);
+  const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
+  const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
+
+  const handleClick = (event) => {
+    setcurrentPage(Number(event.target.id));
+  };
+
+  const pages = [];
+  for (let i = 1; i <= Math.ceil(todos.length / itemsPerPage); i++) {
+    pages.push(i);
+  }
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = todos.slice(indexOfFirstItem, indexOfLastItem);
+
+  const renderData = (data) => {
+    return (
+      <div className="entries">
+        {data.map((item) => {
+          return (
+            <div key={item.id} className="announcementItemBody ">
+              <div className="Left">
+                <div className="leftTop">
+                  {" "}
+                  {dateTimeSelector(item.uploadTime).day}
+                </div>
+                <div className="leftBottom">
+                  {dateTimeSelector(item.uploadTime).month}
+                </div>
+              </div>
+              <a
+                onClick={() => {
+                  setTempItem(item);
+                  handleEditUser(item);
+                  handleShowModal();
+                }}
+              >
+                <div className="right">{item.title}</div>
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const handleNextbtn = () => {
+    setcurrentPage(currentPage + 1);
+
+    if (currentPage + 1 > maxPageNumberLimit) {
+      setmaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
+      setminPageNumberLimit(minPageNumberLimit + pageNumberLimit);
+    }
+  };
+
+  const handlePrevbtn = () => {
+    setcurrentPage(currentPage - 1);
+
+    if ((currentPage - 1) % pageNumberLimit === 0) {
+      setmaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
+      setminPageNumberLimit(minPageNumberLimit - pageNumberLimit);
+    }
+  };
+  const renderPageNumbers = pages.map((number) => {
+    if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
+      return (
+        <li
+          key={number}
+          id={number}
+          onClick={handleClick}
+          className={currentPage === number ? "isActive" : null}
+        >
+          {number}
+        </li>
+      );
+    } else {
+      return null;
+    }
+  });
+
   return (
     <div className="announcement shadow">
       <div className="announcementHead">
         <h2>Duyurular</h2>
       </div>
       <div className="announcementBody">
-        {todos.map((alper) => {
-          return (
-            <div key={alper.id} className="announcementItemBody ">
-              <div className="Left ">
-                <div className="leftTop">
-                  {dateTimeSelector(alper.uploadTime).day}
-                </div>
-                <div className="leftBottom">
-                  {dateTimeSelector(alper.uploadTime).month}
-                </div>
-              </div>
-              <a >
-                <div className="right">{alper.title}</div>
-              </a>
+        {renderData(currentItems)}
+        <div className="pagination">
+          <div className="paginationBody">
+            <div className="paginationItem">
+              <ul className="pageNumbers">
+                <button
+                  className="page-btn"
+                  onClick={handlePrevbtn}
+                  disabled={currentPage === pages[0] ? true : false}
+                >
+                  <i class="fa-solid fa-circle-chevron-left fa-xl"></i>
+                </button>
+
+                {renderPageNumbers}
+
+                <button
+                  className="page-btn "
+                  onClick={handleNextbtn}
+                  disabled={
+                    currentPage === pages[pages.length - 1] ? true : false
+                  }
+                >
+                  <i class="fa-solid fa-circle-chevron-right fa-xl"></i>
+                </button>
+              </ul>
             </div>
-          );
-        })}
-        <AnnouncementModal  />
+          </div>
+        </div>
+
+        <AnnouncementModal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          handleShowModal={handleShowModal}
+          todos={todos}
+          tempItem={tempItem}
+        />
       </div>
     </div>
   );
-
 }
