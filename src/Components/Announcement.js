@@ -7,6 +7,20 @@ import AnnouncementModal from "./AnnouncementModal";
 
 export default function Announcement() {
   const [todos, setTodos] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+  const [tempItem, setTempItem] = useState();
+  const [Item, setItem] = useState({
+    user: {},
+  });
+
+  const handleEditUser = (value) => {
+    setItem({
+      user: value,
+    });
+  };
   
   useEffect(() => {
     const fetchTodos = async () => {
