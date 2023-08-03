@@ -67,6 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 600;
 }
 .entries a{
   width: 100%;
@@ -92,6 +93,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 

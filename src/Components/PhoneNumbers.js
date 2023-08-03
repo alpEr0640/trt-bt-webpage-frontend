@@ -19,7 +19,7 @@ function PhoneNumbers() {
     }, []);
 
     return (
-        <div  >
+        <div >
             <div className='PhoneTable shadow'>
                 <div className='PhoneHeader'>
                     <h2>Telefon Numaraları</h2>
