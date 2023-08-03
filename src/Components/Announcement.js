@@ -24,7 +24,6 @@ export default function Announcement() {
   };
 
 
->>>>>>> PhoneNumbers
   useEffect(() => {
     const fetchTodos = async () => {
       try {

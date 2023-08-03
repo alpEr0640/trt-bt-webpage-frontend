@@ -8,7 +8,7 @@ function PhoneNumbers() {
         const fetchTodos = async () => {
             try {
                 const response = await axios.get(
-                    "https://jsonplaceholder.ir/users"
+                  "http://192.168.137.1:8080/api/contacts"
                 );
                 setTodos(response.data);
             } catch (err) {
@@ -29,17 +29,21 @@ function PhoneNumbers() {
 
                     {todos.map((y) => {
                         return (
-                            <div className='PhoneBody'>
-                                <div className='PhoneBodyLeft'>
-                                    <div className='PhoneBodyLeftTop'>{y.contactFullname} {y.contantSurname}</div>
-                                    <div className='PhoneBodyLeftBottom'>{y.title}</div>
-
-                                </div>
-                                <div className='PhoneBodyRight'>
-                                    <div className='phoneNumber'>{y.contactPhoneNumber}</div>
-
-                                </div>
+                          <div className="PhoneBody">
+                            <div className="PhoneBodyLeft">
+                              <div className="PhoneBodyLeftTop">
+                                {y.contactFirstName} {y.contactSurname}
+                              </div>
+                              <div className="PhoneBodyLeftBottom">
+                                {y.title}
+                              </div>
                             </div>
+                            <div className="PhoneBodyRight">
+                              <div className="phoneNumber">
+                                {y.contactPhoneNumber}
+                              </div>
+                            </div>
+                          </div>
                         );
                     })}
                 </div>
